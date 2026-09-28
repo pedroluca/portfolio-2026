@@ -1,26 +1,93 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tema por classe: o script inline do layout coloca ou tira `.dark` do <html> antes do primeiro paint */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --animate-slide-up: slide-up 0.3s ease-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  /* O preflight do Tailwind v4 deixou de aplicar cursor: pointer em botões */
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-white);
+  color: var(--color-zinc-900);
+  color-scheme: light;
+}
+
+html.dark {
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-300);
+  color-scheme: dark;
+}
+
+/* Trava o scroll da página enquanto um modal está aberto */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* O ::backdrop não herda variáveis do :root em navegadores mais antigos, por isso os valores literais */
+.project-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.6);
+  backdrop-filter: blur(4px);
+  animation: fade-in 0.2s ease-out;
+}
+
+.project-dialog {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-blue-600) var(--color-gray-200);
+}
+
+.dark .project-dialog {
+  scrollbar-color: var(--color-blue-600) var(--color-zinc-800);
+}
+
+/* Safari ainda não suporta scrollbar-color */
+.project-dialog::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-dialog::-webkit-scrollbar-track {
+  background: var(--color-gray-200);
+  border-radius: 10px;
+}
+
+.dark .project-dialog::-webkit-scrollbar-track {
+  background: var(--color-zinc-800);
+}
+
+.project-dialog::-webkit-scrollbar-thumb {
+  background: var(--color-blue-600);
+  border-radius: 10px;
+}
+
+.project-dialog::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue-700);
 }
