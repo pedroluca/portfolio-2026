@@ -1,0 +1,8 @@
+# Copiado para out/ no build; vai junto para o public_html da Hostinger
+
+ErrorDocument 404 /404.html
+
+# As imagens de metadata (Open Graph e apple-icon) são geradas sem extensão
+<FilesMatch "^(opengraph-image|apple-icon)$">
+  ForceType image/png
+</FilesMatch>

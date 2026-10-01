@@ -4,6 +4,7 @@ import { logoSrc } from '@/lib/og-image'
 // Ícone da tela inicial no iOS/Android: o logo é branco, então vai sobre o fundo do tema escuro
 export const size = { width: 180, height: 180 }
 export const contentType = 'image/png'
+export const dynamic = 'force-static'
 
 export default function AppleIcon() {
   return new ImageResponse(

@@ -1,16 +1,16 @@
 import type { StaticImageData } from 'next/image'
-import financesLogo from '@/assets/images/projects/finances-app.png'
-import presenzoLogo from '@/assets/images/projects/presenzo-app.png'
-import tractusLogo from '@/assets/images/projects/tractus-app.png'
-import appFinances from '@/assets/images/projects/app-finances.png'
-import appTractus from '@/assets/images/projects/app-tractus.png'
-import sitePresenzo from '@/assets/images/projects/site-presenzo.png'
-import siteTractus from '@/assets/images/projects/site-tractus.png'
-import olimpiadas from '@/assets/images/projects/olimpiadas.jpg'
-import painelEstanciaA from '@/assets/images/projects/painel-estanciaa.jpg'
-import fazendaCedro from '@/assets/images/projects/fazenda-cedro.jpg'
-import crianca from '@/assets/images/projects/crianca.jpg'
-import ifbaiano from '@/assets/images/projects/ifbaiano.jpg'
+import financesLogo from '@/assets/images/projects/finances-app.webp'
+import presenzoLogo from '@/assets/images/projects/presenzo-app.webp'
+import tractusLogo from '@/assets/images/projects/tractus-app.webp'
+import appFinances from '@/assets/images/projects/app-finances.webp'
+import appTractus from '@/assets/images/projects/app-tractus.webp'
+import sitePresenzo from '@/assets/images/projects/site-presenzo.webp'
+import siteTractus from '@/assets/images/projects/site-tractus.webp'
+import olimpiadas from '@/assets/images/projects/olimpiadas.webp'
+import painelEstanciaA from '@/assets/images/projects/painel-estanciaa.webp'
+import fazendaCedro from '@/assets/images/projects/fazenda-cedro.webp'
+import crianca from '@/assets/images/projects/crianca.webp'
+import ifbaiano from '@/assets/images/projects/ifbaiano.webp'
 
 export interface Project {
   title: string
@@ -53,7 +53,7 @@ export const projects: Project[] = [
   //   title: 'App TrainLog',
   //   description: 'Webapp para acompanhamento de treinos e exercícios, com temporizador de intervalos incluso e compartilhamento de treinos.',
   //   url: 'https://app.trainlog.site/',
-  //   image: appTrainlog, // import appTrainlog from '@/assets/images/projects/app-trainlog.jpg'
+  //   image: appTrainlog, // import appTrainlog from '@/assets/images/projects/app-trainlog.webp'
   // },
   {
     title: 'Site Tractus',

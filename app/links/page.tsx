@@ -8,7 +8,7 @@ import { breadcrumbJsonLd } from '@/lib/structured-data'
 export const metadata = pageMetadata({
   title: 'Links',
   description: 'Redes sociais, aplicativos e contato de Pedro Luca Prates.',
-  path: '/links',
+  path: '/links/',
 })
 
 export default function LinksPage() {

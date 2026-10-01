@@ -13,9 +13,6 @@ export const metadata = pageMetadata({
   path: '/',
 })
 
-// Página estática, regerada uma vez por dia para a idade no "Sobre mim" não ficar desatualizada
-export const revalidate = 86400
-
 export default function HomePage() {
   return (
     <>

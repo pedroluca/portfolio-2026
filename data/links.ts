@@ -1,9 +1,9 @@
 import { Mail, type IconNode } from 'lucide'
 import type { StaticImageData } from 'next/image'
 import { siDuolingo, siGithub, siInstagram, siThreads, siYoutube, type SimpleIcon } from 'simple-icons'
-import financesLogo from '@/assets/images/projects/finances-app.png'
-import presenzoLogo from '@/assets/images/projects/presenzo-app.png'
-import tractusLogo from '@/assets/images/projects/tractus-app.png'
+import financesLogo from '@/assets/images/projects/finances-app.webp'
+import presenzoLogo from '@/assets/images/projects/presenzo-app.webp'
+import tractusLogo from '@/assets/images/projects/tractus-app.webp'
 import { Linkedin } from '@/components/icon'
 import { social } from '@/lib/site'
 

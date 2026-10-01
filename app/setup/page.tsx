@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
   title: 'Setup',
   description:
     'Os equipamentos, ferramentas, livros e newsletters que Pedro Luca Prates usa no dia a dia como desenvolvedor.',
-  path: '/setup',
+  path: '/setup/',
 })
 
 export default function SetupPage() {
